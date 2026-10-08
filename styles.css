@@ -32,6 +32,7 @@ main {
   display: flex;
   justify-content: center; /* alinhando conteúdo no eixo horizontal */
   align-items: center; /* alinhando conteúdo no eixo vertical */
+  padding: 24px;
 }
 
 article {
@@ -41,13 +42,20 @@ article {
   border-color: hsl(0, 0%, 7%);
   border-style: solid;
   padding: 24px;
-  width: 348px;
   box-shadow: 8px 8px;
+
+  /* responsividade */
+  width: 100%;
+  max-width: 348px;
 }
 
 img {
     border-radius: 10px;
+    width: 100%;
+    height: auto;       
+    display: block;
 }
+
 
 header + p {
     padding-top: 6px;
