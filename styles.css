@@ -1,12 +1,14 @@
 /* Configurando familia de fontes para o projeto */
 @font-face {
   font-family: 'Figtree';
-  src: url('./assets/fonts/Figtree-ExtraBold.ttf') format('truetype');
+  src: url(assets/fonts/static/Figtree-ExtraBold.ttf) format('truetype');
+  font-weight: 800;
 }
 
 @font-face {
   font-family: 'Figtree';
-  src: url('./assets/fonts/Figtree-Medium.ttf') format('truetype');
+  src: url(assets/fonts/static/Figtree-Medium.ttf) format('truetype');
+  font-weight: 500;
 }
 
 /* Limpando os estilos padrões do navegador */
@@ -16,10 +18,20 @@
   box-sizing: border-box;
 }
 
+html, body, main {
+  height: 100%;
+}
+
 /* Aplicando estilos gerais */
 body {
   font-family: 'Figtree', sans-serif;
   background-color:  hsl(47, 88%, 63%);
+}
+
+main {
+  display: flex;
+  justify-content: center; /* alinhando conteúdo no eixo horizontal */
+  align-items: center; /* alinhando conteúdo no eixo vertical */
 }
 
 article {
@@ -37,13 +49,62 @@ img {
     border-radius: 10px;
 }
 
-p {
-    padding-top: 4px;
-    padding-bottom: 4px;
+header + p {
+    padding-top: 6px;
+    padding-bottom: 6px;
     padding-left: 12px;
     padding-right: 12px;
 
     background-color: hsl(47, 88%, 63%);
     border-radius: 4px;
 
+    font-size: 14px;
+    font-weight: 800;
+
+    width: fit-content;
+
+    margin-top: 24px;
+    margin-bottom: 12px;
+
 }
+
+p + p {
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+h1 {
+  margin-bottom:12px;
+  font-weight: 800;
+  font-size: 24px;
+}
+
+h1 + p {
+  color: hsl(0, 0%, 42%);
+  line-height: 1.5;
+  margin-bottom: 24px
+}
+
+h1:hover {
+  color: hsl(47, 88%, 63%);
+  cursor: pointer;
+}
+
+footer {
+  display: flex;
+  align-items: center; /* alinhando conteúdo no eixo vertical */
+  gap: 12px; /* espaçamento entre os elementos do footer */
+
+} 
+
+footer img {
+  width: 32px;
+  height: 32px;
+}
+
+footer p {
+  font-size: 14px;
+  font-weight: 800;
+}
+
+
